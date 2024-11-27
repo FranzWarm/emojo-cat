@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #131313;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    color: #aaa;
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+.emoji {
+    display: flex; /* Usar flexbox para alinhar o conteúdo */
+    flex-direction: column; /* Alinhar o conteúdo na vertical */
+    align-items: center; /* Centralizar horizontalmente */
+    width: 100px; /* Largura fixa */
+    height: 100px; /* Altura fixa */
+    margin: 0px;
+    text-align: center;
+    transition: transform 0.3s; /* Transição suave para o aumento */
+}
+
+.emoji-text {
+    display: inline-block; /* Para que o fundo funcione corretamente */
+    padding: 2px 5px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    word-wrap: break-word; /* Permitir quebra de linha */
+    max-width: 90%; /* Limitar a largura do texto */
+}
+
+.emoji:hover {
+    transform: scale(2); /* Aumenta a div ao passar o mouse */
+}
+
+.emoji:hover .emoji-text {
+    background-color: #e0e0e0; /* Fundo claro para o texto */
+    color: #000; /* Texto escuro */
+}
+
+.emoji img {
+    width: 32px; /* Tamanho padrão */
+    height: 32px; /* Tamanho padrão */
+    transition: width 0.3s, height 0.3s; /* Transição suave */
+}
+
+.category {
+    margin-top: 20px;
+}
+
+.category h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #aaa;
+}
+
+.tab-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    overflow: auto;
+}
+
+.tab {
+    height: 105px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #252525;
+    transition: background 0.3s;
+}
+
+.tab img {
+    width: 64px;
+    height: 64px;
+}
+
+.tab:hover {
+    background: #e0e0e0;
+}
+
+.emoji-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav-container {
+    display: flex; /* Para alinhar os botões e abas horizontalmente */
+    overflow-x: auto; /* Permitir scroll horizontal */
+    overflow-y: hidden; /* Esconder o scroll vertical */
+    white-space: nowrap; /* Impedir que as abas quebrem para a linha seguinte */
+}
+
+.nav-container button {
+    height: 127px; /* Mesma altura que as abas */
+    padding: 0 10px; /* Espaçamento horizontal */
+    background: #252525; /* Cor de fundo */
+    color: #aaa; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background 0.3s; /* Transição suave */
+}
+.instance-input {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.instance-input label {
+    margin-right: 10px;
+}
+
+.instance-input input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#emoji-info {
+    text-align: center;
+}
